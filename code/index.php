@@ -8,18 +8,43 @@
 </head>
 <body>
     <header>
-        <?php
 
-        echo "<h1>My Superhero</h1>";
+       <?php echo "<h1>My Superhero</h1>";?>
+        <nav><?php include 'inc/nav.php' ?></nav>
 
-    ?>
     </header>
-    <?php
+    
+<?php
 
 require 'inc/conn.php';
-include 'inc/nav.php';
 
 ?>
+
+<form action="insert.php" method="post">
+<input type="submit" value="Insert">
+</form>
+
+<?php
+
+$queryID = "SELECT * FROM hero ORDER BY id DESC";
+
+foreach ($conn->query($queryID) as $value) {
+
+
+
+    echo "<form action='update.php' method='post'>
+    <input type='text' name='heroID' value='" . $value['id'] . "'>
+    <input type='submit' value='update'>
+    </form>";
+
+    echo "<form action='delete.php' method='post'>
+    <input type='text' name='heroID' value'" . $value['id'] . "'>
+    <input type='submit' value='delete'>
+    </form>";
+}
+
+?>
+
 
 
     </body>
