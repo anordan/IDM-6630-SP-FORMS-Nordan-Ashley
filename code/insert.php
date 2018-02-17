@@ -14,7 +14,17 @@
 
     ?>
     </header>
+    <?php
 
+require 'inc/conn.php';
+include 'inc/nav.php';
+
+try {
+    $query = "INSERT INTO hero (hero_name) VALUES ('Buffy the Vampire Slayer')";
+    $conn -> exec($query);
+}
+
+?>
 
 
     </body>

@@ -15,6 +15,12 @@
     ?>
     </header>
 
+<?php
+
+require 'inc/conn.php';
+include 'inc/nav.php';
+
+?>
 
 
     </body>
