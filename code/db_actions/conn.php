@@ -1,7 +1,7 @@
 
     <?php
     $host = "localhost";
-    $db = "checkin";
+    $db = "week_05";
     $un = "root";
     $pw = "root";
 
