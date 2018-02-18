@@ -1,16 +1,13 @@
-
 <?php
 
 require 'inc/conn.php';
 
 
 try {
-    $query = "INSERT INTO hero (hero_name) VALUES ('Buffy the Vampire Slayer')";
+    $query = "INSERT INTO hero (name) VALUES ('". $_REQUEST['hero_name'] . "')";
     $conn -> exec($query);
 
-    $queryInsert = "SELECT * FROM hero";
-    foreach ($conn -> query($queryInsert) as $hero) {
-        echo "<h1>" . $hero["name"] . "</h1>';"}
+    header('Location: index.php') ;
 
 } catch (PDOException $e) {
     echo "Insert Failed: " . $e->getMessege();
