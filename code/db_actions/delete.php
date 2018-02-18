@@ -1,11 +1,19 @@
 <?php
-
-require 'inc/conn.php';
+//creates database conn
+require 'conn.php';
 
 try {
-    $query = "DELETE FROM hero WHERE id = " . $_REQUEST['heroID'];
-    $conn->exec($query);
+    $query = "DELETE FROM sites WHERE id = :site_id";
 
+//prepares and executes query based on request data sent by form, taken from gitgists/hints
+
+$statement = $conn -> prepare($query);
+$statement -> bindParam(':site_id', $REQUEST['site_id']);
+$statement->execute();
+
+
+//redirects back to homepage
+header ('Location: ../index.php');
 
 } catch (PDOException $e) {
     echo "Delete Failed: " . $e->getMessege();

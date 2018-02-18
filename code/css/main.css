@@ -48,8 +48,8 @@ input[type=button], input[type=submit], input[type=reset] {
     background-color: #000;
     border: none;
     color: white;
-    padding: 40px 40px;
+    padding: 10px 20px;
     text-decoration: none;
-    margin: 4px 28px;
+    margin: 5px 10px;
     cursor: pointer;
 }
