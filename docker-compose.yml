@@ -3,7 +3,7 @@ version: '3'
 services:
     database:
         image: mysql:5.7
-        container_name: ALGEO-Robert-DB
+        container_name: NORDAN-Ashley-DB
         restart: always
         expose:
             - "3306"
@@ -16,7 +16,7 @@ services:
             MYSQL_PASSWORD: idm6630
 
     php: 
-        container_name: ALGEO-Robert-PHP
+        container_name: NORDAN-Ashley-PHP
         build:
             context: .
             dockerfile: Dockerfile-php
@@ -29,7 +29,7 @@ services:
 
     phpmyadmin:
         image: phpmyadmin/phpmyadmin:latest
-        container_name: ALGEO-Robert-PHPMYADMIN
+        container_name: NORDAN-Ashley-PHPMYADMIN
         ports:
             - "8181:80"
         restart: always
