@@ -6,7 +6,8 @@ h1 {
     font-family: Helvetica, Arial, sans-serif;
     font-size: 3em;
     color: #000;
-    margin-right: 10em;
+    margin-left: 1em;
+    margin-top: 1em;
     
 }
 
@@ -22,32 +23,42 @@ h2 {
 
 ul {
     list-style: none;
-    float: right;
+    font-family: Helvetica, Arial, sans-serif;
+    
 }
 
 ul li {
+    font-family: Helvetica, Arial, sans-serif;
     list-style: none;
-    margin: 0;
+    margin: 1em;
 
     
 }
 
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    color: #e08387;
+    margin-left: 5em;
+}
+
 a {
     text-decoration: none;
-    color: #db0f16;
+    color: blue;
     font-family: Futura, "Trebuchet MS", Arial, sans-serif;
     font-size: 2em;
 }
 
 input[type=text] {
-    background-color: #000;
-    color: white;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    background-color: #fff;
+    color: #e08387;
 }
 
 input[type=button], input[type=submit], input[type=reset] {
-    background-color: #000;
+    background-color: yellow;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
     border: none;
-    color: white;
+    color: #db0f16;
     padding: 10px 20px;
     text-decoration: none;
     margin: 5px 10px;

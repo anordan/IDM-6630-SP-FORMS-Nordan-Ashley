@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Feb 18, 2018 at 06:43 PM
+-- Generation Time: Feb 19, 2018 at 03:58 AM
 -- Server version: 5.6.34-log
 -- PHP Version: 7.1.5
 
@@ -19,35 +19,36 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `checkin`
+-- Database: `week_05`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `hero`
+-- Table structure for table `sites`
 --
 
-CREATE TABLE `hero` (
+CREATE TABLE `sites` (
   `id` int(20) NOT NULL,
-  `name` varchar(225) NOT NULL
+  `site_name` varchar(255) NOT NULL,
+  `site_url` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `hero`
+-- Dumping data for table `sites`
 --
 
-INSERT INTO `hero` (`id`, `name`) VALUES
-(1, 'Buffy the Vampire Slayer');
+INSERT INTO `sites` (`id`, `site_name`, `site_url`) VALUES
+(11, 'chewy', 'chewy.com');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `hero`
+-- Indexes for table `sites`
 --
-ALTER TABLE `hero`
+ALTER TABLE `sites`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -55,10 +56,10 @@ ALTER TABLE `hero`
 --
 
 --
--- AUTO_INCREMENT for table `hero`
+-- AUTO_INCREMENT for table `sites`
 --
-ALTER TABLE `hero`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;COMMIT;
+ALTER TABLE `sites`
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

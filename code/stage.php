@@ -11,10 +11,10 @@ $query = "SELECT * FROM sites WHERE id = :site_id";
 
 //prepares and executes query based on request, taken from git gists
 
-$statement = $conn -> prepare($query);
-$statement -> bindParam(':site_id', $_REQUEST['site_id']);
+$statement = $conn->prepare($query);
+$statement->bindParam(':site_id', $_REQUEST['site_id']);
 
-$statement -> execute();
+$statement->execute();
 
 //creates variable that contains data, help from video
 
